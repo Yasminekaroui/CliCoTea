@@ -1,6 +1,6 @@
 # CLiCoTEA: Cross-Lingual Contextualised Token Embedding Alignment
 
-This code reproduces the results from ACL 2023 paper ["Stop Pre-Training: Adapt Visual-Language Models to Unseen Languages "](https://arxiv.org/abs/2306.16774).
+This code reproduces the results from ACL 2023 paper ["Stop Pre-Training: Adapt Visual-Language Models to Unseen Languages"](https://arxiv.org/abs/2306.16774).
 
 ## Installation
 These dependencies must be installed:
@@ -12,7 +12,7 @@ pip install hatch gdown
 
 ## Prepare datasets
 
-Download all datasets from Cross-Lingual Contextualised Token Embedding Alignment and Zero-Shot Cross-Lingual transfer to downstream tasks:
+Download all datasets for training the Cross-Lingual Contextualised Token Embedding Alignment and the Zero-Shot Cross-Lingual transfer to downstream tasks:
 ```bash
 bash scripts/datasets/download_datasets.sh data
 ```
@@ -26,17 +26,52 @@ bash scripts/datasets/prepare_snli.sh
 bash scripts/datasets/prepare_nlvr2.sh
 ```
 
-## Compute token alignment with `awesome-align` package.
+## Compute token alignment with `awesome-align` model
 
 ```bash
 bash scripts/alignment/token_alignment_flickr30k.sh
 bash scripts/alignment/token_alignment_snli.sh
 bash scripts/alignment/token_alignment_nlvr2.sh
 ```
+This should create aligned word pairs in `data` folder for each dataset as follows:
+```
+data/
+   flickr30k/
+      word_pairs_dev_en-de.json
+      word_pairs_dev_en-es.json
+      word_pairs_dev_en-id.json
+      word_pairs_dev_en-ru.json
+      word_pairs_dev_en-tr.json
+      word_pairs_train_en-de.json
+      word_pairs_train_en-es.json
+      word_pairs_train_en-id.json
+      word_pairs_train_en-ru.json
+      word_pairs_train_en-tr.json
+   nlvr2/
+      word_pairs_dev_en-id.json
+      word_pairs_dev_en-sw.json
+      word_pairs_dev_en-ta.json
+      word_pairs_dev_en-tr.json
+      word_pairs_dev_en-zh-cn.json
+      word_pairs_train_en-id.json
+      word_pairs_train_en-sw.json
+      word_pairs_train_en-ta.json
+      word_pairs_train_en-tr.json
+      word_pairs_train_en-zh-cn.json
+   snli/
+      word_pairs_dev_en-ar.json
+      word_pairs_dev_en-es.json
+      word_pairs_dev_en-fr.json
+      word_pairs_dev_en-ru.json
+      word_pairs_train_en-ar.json
+      word_pairs_train_en-es.json
+      word_pairs_train_en-fr.json
+      word_pairs_train_en-ru.json
+```
 
 ## Train CLiCoTEA
 
-Train CLiCoTEA (modify environment variables first):
+Train CLiCoTEA by running the following commands (default options should be modified from the bash script):
 ```bash
 # train CLiCoTEA for image/text retrieval on flickr30k in German
 bash scripts/embeddings/train_clicotea.sh flickr30k albef_retrieval flickr de
@@ -63,12 +98,12 @@ bash scripts/zero-shot/download_datasets.sh
 
 2. Run zero-shot evaluation:
 ```bash
-DATA_DIR=<path to folder containing test files>
-LANG=<language to test>
-FLICKR30K_IMAGE_ROOT=<place path to image folder>
-COCO_IMAGE_ROOT=<place path to image folder>
-MARVL_IMAGE_ROOT=<place path to image folder>
-PATH_TO_CHECKPOINT=<place path to model checkpoint>
+DATA_DIR="<path to folder containing test files>"
+LANG="<language to test>"
+FLICKR30K_IMAGE_ROOT="<place path to image folder>"
+COCO_IMAGE_ROOT="<place path to image folder>"
+MARVL_IMAGE_ROOT="<place path to image folder>"
+PATH_TO_CHECKPOINT="<place path to model checkpoint>"
 ```
 - Retrieval task on xFlickrCO
 
