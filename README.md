@@ -106,12 +106,17 @@ Please cite as:
 
 ```bibtex
 @inproceedings{clicotea,
-      title={Stop Pre-Training: Adapt Visual-Language Models to Unseen Languages},
-      author={Yasmine Karoui and Rémi Lebret and Negar Foroutan and Karl Aberer},
-      month={july},
-      year={2023},
-      booktitle = {Proceedings of the 61th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
-      publisher = {Association for Computational Linguistics},
-      location = {Toronto, Canada},
+   title = "Stop Pre-Training: Adapt Visual-Language Models to Unseen Languages",
+    author = "Karoui, Yasmine  and
+      Lebret, R{\'e}mi  and
+      Foroutan Eghlidi, Negar  and
+      Aberer, Karl",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-short.32",
+    pages = "366--375",
 }
 ```

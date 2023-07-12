@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use CLiCoTEA, please cite it as below."
+authors:
+- family-names: "Karoui"
+  given-names: "Yasmine"
+- family-names: "Lebret"
+  given-names: "Rémi"
+  orcid: "https://orcid.org/0000-0001-5439-7574"
+- family-names: "Foroutan Eghlidi"
+  given-names: "Negar"
+  orcid: "https://orcid.org/0000-0002-9640-897X"
+- family-names: "Aberer"
+  given-names: "Karl"
+  orcid: "https://orcid.org/0000-0003-3005-7342"
+title: "CLiCoTEA: Cross-Lingual Contextualised Token Embedding Alignment"
+version: 0.1.0
+date-released: 2023-07-12
+url: "https://github.com/Yasminekaroui/CliCoTea"
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "Karoui"
+      given-names: "Yasmine"
+    - family-names: "Lebret"
+      given-names: "R\\'{e}mi"
+      orcid: "https://orcid.org/0000-0001-5439-7574"
+    - family-names: "Foroutan Eghlidi"
+      given-names: "Negar"
+      orcid: "https://orcid.org/0000-0002-9640-897X"
+    - family-names: "Aberer"
+      given-names: "Karl"
+      orcid: "https://orcid.org/0000-0003-3005-7342"
+  title: "Stop Pre-Training: Adapt Visual-Language Models to Unseen Languages"
+  conference: 
+    name: "ACL 2023"
+  collection-title: "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)"
+  publisher: 
+    name: "Association for Computational Linguistics"
+  start: 366 # First page number
+  end: 375 # Last page number
+  month: 7
+  year: 2023
